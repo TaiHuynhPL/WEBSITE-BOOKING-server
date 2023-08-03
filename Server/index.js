@@ -29,6 +29,10 @@ app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 app.use("/api/transactions", transactionRoute);
 
+app.get("/",(req,res)=>{
+  res.send("Server is running!")
+})
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
