@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO);
+    await mongoose.connect("mongodb+srv://taihnfx22084:W2BwfFCabhqLVN4p@cluster0.reosw56.mongodb.net/booking");
     console.log("Connected to mongoDB");
   } catch (err) {
     console.log(err);
